@@ -7,7 +7,7 @@ import LogoUSM from '../assets/usm.png'
 export const InternalPage = () => {
   return (
     <div className='page'>
-      <h1 className='page__title'>Frontend Sample App</h1>
+      <h1 className='page__title'>Chile Ayuda</h1>
       <NavBar />
       <h2>Ayudado</h2>
       <img src={LogoUSM} height={100} alt='logo usm' /><br />
