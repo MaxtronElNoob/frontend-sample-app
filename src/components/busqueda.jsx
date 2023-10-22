@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box,Card,CardContent,CardMedia,CardActionArea,Typography, Container} from '@mui/material';
+import {Box,Card,CardContent,CardMedia,CardActionArea,Typography} from '@mui/material';
 import SOS from '../assets/2785651.png'
 
 export const Search = (props) => {
@@ -8,12 +8,7 @@ export const Search = (props) => {
         <Card className='entry'>
             <CardActionArea  className='entry-button'>
                 <Box className='first'>
-                    <CardMedia
-                        className='sos'
-                        component="img"
-                        src={SOS}
-                        alt="Live from space album cover"
-                    />
+                    <CardMedia className='sos' component="img" src={SOS} alt="SOS"/>
                     <Typography className='Tipo'>{tipo}</Typography>
                 </Box>
                 <CardContent>

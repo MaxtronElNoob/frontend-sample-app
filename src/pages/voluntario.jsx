@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Box, Button, Modal } from '@mui/material';
+import { Box, Button, Container, Modal, Stack,Typography } from '@mui/material';
 import { Search } from '../components/busqueda';
 import NavBar from '../components/nav_bar';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export const Voluntario = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -29,7 +30,7 @@ export const Voluntario = () => {
 
   const props = {
     'tipo': 'Urgente',
-    'dia': 'hoy',
+    'dia': 'Hoy',
     'lugar': 'Machupichu',
     'n_vol': nVol, 
     'distance': 1000
@@ -37,20 +38,20 @@ export const Voluntario = () => {
 
   return (
     <div className='page'>
-      <h1 className='page__title'>Chile Ayuda</h1>
       <NavBar />
-      <h2>nombre_Voluntario</h2>
-      <Box sx={{ display: 'grid' }}>
-        <Button variant='contained' onClick={openModal}>
-          Ayudar
-        </Button>
-        <Button variant='contained' onClick={openListaAyudasModal}>
-          Lista de ayudas
-        </Button>
-      </Box>
+      <Stack direction='row'>
+        <AccountCircleIcon className='usuario' fontSize='large'/>
+        <Typography variant='h2'>nombre_Voluntario</Typography>
+      </Stack>
+      <Container>
+        <Box sx={{ display: 'grid' }}>
+          <Button variant='contained' onClick={openModal}>Ayudar</Button>
+          <Button variant='contained' onClick={openListaAyudasModal}>Lista de ayudas</Button>
+        </Box>
+        <Search {...props} />
+        <Button variant='contained'>Perfil</Button>
+      </Container>
 
-      <Search {...props} />
-      <Button variant='contained'>Perfil</Button>
 
       <Modal open={modalOpen} onClose={closeModal}>
         <Box

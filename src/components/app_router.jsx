@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import HomePage from '../pages/home'
 import Voluntario from '../pages/voluntario'
-import Solicitante from '../pages/solicitante.jsx'
+import { Solicitante } from '../pages/solicitante.jsx'
 
 const AppRouter = () => {
   return (
