@@ -1,9 +1,13 @@
 .entry{
     width: fit-content!important;
     row-gap: 10%;
+    max-width: 600px !important;
 }
 .entry-button{
     display:flex!important;
+    justify-content: space-around!important;
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
 }
 .first{
     display: grid;

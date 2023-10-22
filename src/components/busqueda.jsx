@@ -3,13 +3,13 @@ import {Box,Card,CardContent,CardMedia,CardActionArea,Typography} from '@mui/mat
 import SOS from '../assets/2785651.png'
 
 export const Search = (props) => {
-    const{tipo,dia,lugar,n_vol,distance}=props;
+    const{urgencia,dia,lugar,n_vol,distance}=props;
     return (
         <Card className='entry'>
             <CardActionArea  className='entry-button'>
                 <Box className='first'>
                     <CardMedia className='sos' component="img" src={SOS} alt="SOS"/>
-                    <Typography className='Tipo'>{tipo}</Typography>
+                    <Typography className='Tipo'>{urgencia}</Typography>
                 </Box>
                 <CardContent>
                     <Typography component="div" variant="subtitle1" color="text.secondary" className='fecha'>{dia}</Typography>

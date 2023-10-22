@@ -3,6 +3,7 @@ import {Container,Accordion,Typography,AccordionSummary,AccordionDetails,Stack,C
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NavBar from '../components/nav_bar';
 import Solicitud from '../components/solicitud';
+import data from '../bd/data.json';
 
 export const Solicitante = () => {
 

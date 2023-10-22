@@ -3,6 +3,7 @@ import { Box, Button, Container, Modal, Stack,Typography } from '@mui/material';
 import { Search } from '../components/busqueda';
 import NavBar from '../components/nav_bar';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import data from '../bd/data.json';
 
 export const Voluntario = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -28,27 +29,19 @@ export const Voluntario = () => {
     setListaAyudasModalOpen(false);
   };
 
-  const props = {
-    'tipo': 'Urgente',
-    'dia': 'Hoy',
-    'lugar': 'Machupichu',
-    'n_vol': nVol, 
-    'distance': 1000
-  };
-
   return (
     <div className='page'>
       <NavBar />
       <Stack direction='row'>
         <AccountCircleIcon className='usuario' fontSize='large'/>
-        <Typography variant='h2'>nombre_Voluntario</Typography>
+        <Typography variant='h2'>{data.Voluntarios[0].nombre}</Typography>
       </Stack>
       <Container>
         <Box sx={{ display: 'grid' }}>
           <Button variant='contained' onClick={openModal}>Ayudar</Button>
           <Button variant='contained' onClick={openListaAyudasModal}>Lista de ayudas</Button>
         </Box>
-        <Search {...props} />
+          {data['ayudasActivas'].map((ayuda,index)=><Search key={index}  {...ayuda} />)}
         <Button variant='contained'>Perfil</Button>
       </Container>
 
