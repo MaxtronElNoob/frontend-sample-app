@@ -5,9 +5,13 @@ import NavBar from '../components/nav_bar';
 
 export const Voluntario = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [listaAyudasModalOpen, setListaAyudasModalOpen] = useState(false); // Estado para el nuevo modal
+  const [listaAyudasModalOpen, setListaAyudasModalOpen] = useState(false);
+  const [nVol, setNVol] = useState(4);
+  const [nombres, setNombres] = useState(['Hernan', 'Juan', 'Maria', 'Pedro']);
 
   const openModal = () => {
+    setNVol(nVol + 1);
+    setNombres([...nombres, 'Pablo']);
     setModalOpen(true);
   };
 
@@ -27,11 +31,9 @@ export const Voluntario = () => {
     'tipo': 'Urgente',
     'dia': 'hoy',
     'lugar': 'Machupichu',
-    'n_vol': 4,
+    'n_vol': nVol, 
     'distance': 1000
   };
-
-  const nombres = ['Hernan', 'Juan', 'Maria', 'Pedro']; // Lista de nombres de ejemplo
 
   return (
     <div className='page'>
@@ -42,7 +44,7 @@ export const Voluntario = () => {
         <Button variant='contained' onClick={openModal}>
           Ayudar
         </Button>
-        <Button variant='contained' onClick={openListaAyudasModal}> {/* Botón para abrir el modal de lista de ayudas */}
+        <Button variant='contained' onClick={openListaAyudasModal}>
           Lista de ayudas
         </Button>
       </Box>
@@ -69,7 +71,6 @@ export const Voluntario = () => {
         </Box>
       </Modal>
 
-      {/* Modal de Lista de Ayudas */}
       <Modal open={listaAyudasModalOpen} onClose={closeListaAyudasModal}>
         <Box
           sx={{
