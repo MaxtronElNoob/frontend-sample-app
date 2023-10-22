@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@mui/material'
+import { Box, Button, Grid } from '@mui/material'
 import { Search } from '../components/busqueda'
 import NavBar from '../components/nav_bar'
 
@@ -9,12 +9,16 @@ export const voluntario = () => {
       <h1 className='page__title'>Chile Ayuda</h1>
       <NavBar />
       <h2>nombre_Voluntario</h2>
-      <Button variant='contained'>Ayudar</Button>
-      <Button variant='contained'>Lista de ayudas</Button>
-      <Button variant='contained'>Perfil</Button>
+      <Box sx={{display:'grid'}}>
+        <Button variant='contained'>Ayudar</Button>
+        <Button variant='contained'>Lista de ayudas</Button>
+      </Box>
+
+      
       {/* <img src={LogoUSM} height={100} alt='logo usm' /><br />
       <Button variant='contained'>Material UI Button</Button> */}
       <Search></Search>
+      <Button variant='contained'>Perfil</Button>
     </div>
   )
 }

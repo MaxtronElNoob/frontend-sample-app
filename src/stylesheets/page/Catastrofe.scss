@@ -1,10 +1,21 @@
-.sos{
-    width: 20%!important;
-}
 .entry{
-    display: flex!important;
-    flex-direction: row!important;
+    width: fit-content!important;
+    row-gap: 10%;
+}
+.entry-button{
+    display:flex!important;
+}
+.first{
+    display: grid;
+    justify-items: center;
+    max-width: 10%;
+    display: inline-block;
 }
 .Tipo{
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    pad: 10%;
+}
+.Distancia{
+    pad: 10%!important;
 }

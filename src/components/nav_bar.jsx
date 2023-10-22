@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Home } from '@mui/icons-material'
 
 export const NavBar = () => {
   return (
@@ -8,7 +9,7 @@ export const NavBar = () => {
         className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`}
         to='/'
       >
-        Página de inicio
+        <Home></Home>
       </NavLink>
       <NavLink
         className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`}
