@@ -1,6 +1,7 @@
 import * as React from 'react'; // Import useState from React
 import "leaflet/dist/leaflet.css";
 import { Modal, Button, Box, Typography } from "@mui/material";
+
 import NavBar from '../components/nav_bar';
 import {MapContainer ,TileLayer, Marker, popUp, Popup} from "react-leaflet";
 import {Icon} from "leaflet";

@@ -2,13 +2,12 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Home } from '@mui/icons-material'
 import { Typography } from '@mui/material';
+import logo from '../assets/logo.png'
 
 export const NavBar = () => {
   return (
-    <div>
-      <Typography variant='h1' className='page__title'>Chile Ayuda</Typography>
       <nav className='nav-bar'>
-        <NavLink className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'><Home/></NavLink>
+        <NavLink className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'><img src={logo} className='logo'/></NavLink>
         <NavLink className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/voluntario'>
           Voluntario
         </NavLink>
@@ -16,8 +15,6 @@ export const NavBar = () => {
           Solicitante
         </NavLink>
       </nav>
-    </div>
-
   )
 }
 
