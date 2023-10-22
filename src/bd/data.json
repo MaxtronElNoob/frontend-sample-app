@@ -33,7 +33,7 @@
     "Voluntarios":[{
         "id":1,
         "nombre":"Hernan",
-        "listaAyudas":[]
+        "historial":[]
         }
     ]
     
