@@ -1,5 +1,5 @@
 import * as React from 'react'; // Import useState from React
-import {Container,Accordion,Typography,AccordionSummary,AccordionDetails,Stack,Card, Divider} from '@mui/material';
+import {Container,Accordion,Typography,AccordionSummary,AccordionDetails,Stack,Card, Divider, Button} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NavBar from '../components/nav_bar';
 import Solicitud from '../components/solicitud';
@@ -34,6 +34,7 @@ export const Solicitante = () => {
               <Typography variant="body1" align='center'>Catastrofe_Sample</Typography>
             </Stack>
           </Stack>
+          <div><Button variant='contained'>Edit</Button></div>
         </Card>
         <h3>Ayudas Pasadas</h3>
         <Accordion>
