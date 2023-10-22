@@ -1,11 +1,14 @@
 {
-    "ayudasActivas":[{
+    "ayudas":[{
             "id":1,
             "urgencia": "Importante",
             "dia": "22/10/23",
             "lugar": "Malvilla",
             "n_vol": 0,
-            "distance": 3.04
+            "volMax": 100,
+            "distance": 3.04,
+            "Status":0,
+            "tipo":"Derrumbe"
         },
         {
             "id":2,
@@ -13,7 +16,10 @@
             "dia": "21/10/23",
             "lugar": "Cartagena",
             "n_vol": 10,
-            "distance": 34.92
+            "volMax": 100,
+            "distance": 34.92,
+            "Status":0,
+            "tipo":"Derrumbe"
         },
         {
             "id":3,
@@ -21,12 +27,15 @@
             "dia": "21/10/23",
             "lugar": "Quillancitos",
             "n_vol": 3,
-            "distance": 42.02
+            "volMax": 100,
+            "distance": 42.02,
+            "Status":0,
+            "tipo":"Derrumbe"
         }
     ],
     "Solicitantes":[{
             "id":1,
-            "ayudasActivas":[1],
+            "ayudasActivas":1,
             "historial":[2,3]
         }
     ],

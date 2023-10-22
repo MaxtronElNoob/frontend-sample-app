@@ -41,7 +41,7 @@ export const Voluntario = () => {
           <Button variant='contained' onClick={openModal}>Ayudar</Button>
           <Button variant='contained' onClick={openListaAyudasModal}>Lista de ayudas</Button>
         </Box>
-          {data['ayudasActivas'].map((ayuda,index)=><Search key={index}  {...ayuda} />)}
+          {/* {data['ayudas'].map((ayuda,index)=><Search key={index}  {...ayuda} />)} */}
         <Button variant='contained'>Perfil</Button>
       </Container>
 
@@ -53,14 +53,14 @@ export const Voluntario = () => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: 400,
+            width: 600,
             bgcolor: 'background.paper',
             border: '2px solid #000',
             boxShadow: 24,
             p: 2,
           }}
         >
-          Ya estás en la lista de ayuda
+          {data['ayudas'].map((ayuda,index)=><Search key={index}  {...ayuda} />)}
           <Button onClick={closeModal}>Cerrar</Button>
         </Box>
       </Modal>
@@ -72,7 +72,7 @@ export const Voluntario = () => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: 400,
+            width: 600,
             bgcolor: 'background.paper',
             border: '2px solid #000',
             boxShadow: 24,
@@ -80,11 +80,12 @@ export const Voluntario = () => {
           }}
         >
           <h3>Lista de Ayudas</h3>
-          <ul>
+          {/* <ul>
             {nombres.map((nombre, index) => (
               <li key={index}>{nombre}</li>
             ))}
-          </ul>
+          </ul> */}
+          {data['ayudas'].map((ayuda,index)=><Search key={index}  {...ayuda} />)}
           <Button onClick={closeListaAyudasModal}>Cerrar</Button>
         </Box>
       </Modal>
