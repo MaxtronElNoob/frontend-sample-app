@@ -35,7 +35,6 @@ export const Solicitante = () => {
             </Stack>
           </Stack>
           <Stack direction="column" spacing={2}>
-            <Button variant='contained'>Edit</Button>
             <Button variant='contained' color='error'>Terminate</Button>
           </Stack>
         </Card>

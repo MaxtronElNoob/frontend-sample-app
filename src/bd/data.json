@@ -27,7 +27,7 @@
     "Solicitantes":[{
             "id":1,
             "ayudasActivas":[1],
-            "AyudasTerminadas":[2,3]
+            "historial":[2,3]
         }
     ],
     "Voluntarios":[{
