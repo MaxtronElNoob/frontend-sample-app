@@ -2,7 +2,8 @@ import * as React from 'react';
 import {Box,Card,CardContent,CardMedia,CardActionArea,Typography, Container} from '@mui/material';
 import SOS from '../assets/2785651.png'
 
-export const Search = () => {
+export const Search = (props) => {
+    const{tipo,dia,lugar,n_vol,distance}=props;
     return (
         <Card className='entry'>
             <CardActionArea  className='entry-button'>
@@ -13,15 +14,15 @@ export const Search = () => {
                         src={SOS}
                         alt="Live from space album cover"
                     />
-                    <Typography className='Tipo'>Urgente</Typography>
+                    <Typography className='Tipo'>{tipo}</Typography>
                 </Box>
                 <CardContent>
-                    <Typography component="div" variant="subtitle1" color="text.secondary" className='fecha'>Dia</Typography>
-                    <Typography className='Place' variant='h4'>Lugar</Typography>
-                    <Typography className='Num_voluntarios' variant='body'>Voluntarios: numero</Typography>
+                    <Typography component="div" variant="subtitle1" color="text.secondary" className='fecha'>{dia}</Typography>
+                    <Typography className='Place' variant='h4'>{lugar}</Typography>
+                    <Typography className='Num_voluntarios' variant='body'>Voluntarios: {n_vol}</Typography>
                 </CardContent>
                 <CardContent>
-                    <Typography className='Distancia' variant='h3' component="div">km</Typography>
+                    <Typography className='Distancia' variant='h3' component="div">{distance} km</Typography>
                 </CardContent>
             </CardActionArea>
         </Card>

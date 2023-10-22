@@ -4,6 +4,7 @@ import { Search } from '../components/busqueda'
 import NavBar from '../components/nav_bar'
 
 export const voluntario = () => {
+  const props = {'tipo':'Urgente','dia':'hoy','lugar':'Machupichu','n_vol':4,'distance':1000}
   return (
     <div className='page'>
       <h1 className='page__title'>Chile Ayuda</h1>
@@ -17,7 +18,7 @@ export const voluntario = () => {
       
       {/* <img src={LogoUSM} height={100} alt='logo usm' /><br />
       <Button variant='contained'>Material UI Button</Button> */}
-      <Search></Search>
+      <Search {...props}/>
       <Button variant='contained'>Perfil</Button>
     </div>
   )
