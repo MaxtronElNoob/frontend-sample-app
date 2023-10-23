@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Box, Button, Container, Modal, Stack,Typography } from '@mui/material';
+import { Box, Button, Container, Modal, Stack,Typography, Card,Divider } from '@mui/material';
 import { Search } from '../components/busqueda';
 import NavBar from '../components/nav_bar';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import data from '../bd/data.json';
 
 export const Voluntario = () => {
@@ -32,17 +31,53 @@ export const Voluntario = () => {
   return (
     <div className='page'>
       <NavBar />
-      <Stack direction='row'>
-        <AccountCircleIcon className='usuario' fontSize='large'/>
-        <Typography variant='h2'>{data.Voluntarios[0].nombre}</Typography>
-      </Stack>
-      <Container>
-        <Box sx={{ display: 'grid' }}>
-          <Button variant='contained' onClick={openModal}>Ayudar</Button>
-          <Button variant='contained' onClick={openListaAyudasModal}>Lista de ayudas</Button>
-        </Box>
-          {/* {data['ayudas'].map((ayuda,index)=><Search key={index}  {...ayuda} />)} */}
-        <Button variant='contained'>Perfil</Button>
+      <Container className='detalles'>
+        <Typography variant='h4'gutterBottom>Datos</Typography>
+        <Card>
+          <div className='boxDetalles'>
+            <div>
+            <Typography variant='h5' >Nombre:</Typography>
+            <Typography className='dato' variant='h5'>{data.Voluntarios[0].nombre}</Typography>
+            </div>
+            <Divider className='detallesDivider'/>
+            <div>
+              <Typography variant='h5'>Edad:</Typography>
+              <Typography className='dato' variant='h5'>21</Typography>
+            </div>
+            <Divider className='detallesDivider'/>
+            <div>
+              <Typography variant='h5'>Comuna:</Typography>
+              <Typography className='dato' variant='h5'>La Reina</Typography>
+            </div>
+          </div>
+        </Card>
+      </Container>
+      <Container className='reporteActivo'>
+        <Typography variant='h4' gutterBottom>Reporte activo</Typography>
+        <Card>
+          <Stack direction="row" spacing={2} sx={{m: 1}}>
+            <Stack direction="column" spacing={2} >
+              <Typography variant="body1" align='center'>Fecha</Typography>
+              <Divider/>
+              <Typography variant="body1" align='center'>{data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).dia}</Typography>
+            </Stack>
+            <Divider orientation='vertical'/>
+            <Stack direction="column" spacing={2}>
+              <Typography variant="body1" align='center'>Avance</Typography>
+              <Divider/>
+              <Typography variant="body1" align='center'>{data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).n_vol} / {data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).volMax}</Typography>
+            </Stack>
+            <Divider orientation='vertical'/>
+            <Stack direction="column" spacing={2}>
+              <Typography variant="body1" align='center'>Catastrofe</Typography>
+              <Divider/>
+              <Typography variant="body1" align='center'>{data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).tipo}</Typography>
+            </Stack>
+          </Stack>
+          <Stack direction="column" spacing={2}>
+            <Button variant='contained' color='error'>Terminate</Button>
+          </Stack>
+        </Card>
       </Container>
 
 
@@ -80,11 +115,6 @@ export const Voluntario = () => {
           }}
         >
           <h3>Lista de Ayudas</h3>
-          {/* <ul>
-            {nombres.map((nombre, index) => (
-              <li key={index}>{nombre}</li>
-            ))}
-          </ul> */}
           {data['ayudas'].map((ayuda,index)=><Search key={index}  {...ayuda} />)}
           <Button onClick={closeListaAyudasModal}>Cerrar</Button>
         </Box>

@@ -3,7 +3,7 @@ import {Box,Card,CardContent,CardMedia,CardActionArea,Typography} from '@mui/mat
 import SOS from '../assets/2785651.png'
 
 export const Search = (props) => {
-    const{urgencia,dia,lugar,n_vol,distance,status}=props;
+    const{urgencia,dia,lugar,n_vol,distance}=props;
     return (
         <Card className='entry'>
             <CardActionArea  className='entry-button'>
