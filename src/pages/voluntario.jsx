@@ -74,9 +74,9 @@ export const Voluntario = () => {
               <Typography variant="body1" align='center'>{data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).tipo}</Typography>
             </Stack>
           </Stack>
-          <Stack direction="column" spacing={2}>
+          {/* <Stack direction="column" spacing={2}>
             <Button variant='contained' color='error'>Terminate</Button>
-          </Stack>
+          </Stack> */}
         </Card>
       </Container>
 
