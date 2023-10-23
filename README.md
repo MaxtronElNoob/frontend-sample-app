@@ -13,9 +13,10 @@ Install dependences
 
 ```
 npm install
-npm install react react-dom leaflet //En caso de error usar --force
-npm install react-leaflet //En caso de error usar --force
+npm install react react-dom leaflet
+npm install react-leaflet
 ```
+*En caso de error usar --force*
 
 Launch environment
 
