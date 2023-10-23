@@ -79,9 +79,9 @@ export const Solicitante = () => {
           </Select>
         </FormControl>
         <FormControl required sx={{ m: 1 }} fullWidth>
-          <InputLabel id="volun-label">Numero de Voluntarios</InputLabel>
           <TextField
             labelId="volun-label"
+            label='Numero de voluntarios'
             type="number"
             inputProps={{ inputProps: { min: 1 } }} // Establecer el mínimo en 1
             onChange={(e) => setVolMax(e.target.value)}
