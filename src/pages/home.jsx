@@ -88,6 +88,11 @@ export const HomePage = () => {
               <Typography variant='h5'>Distancia:</Typography>
               <Typography className='dato' variant='h5'>{data.ayudas[0].distance} [KM]</Typography>
             </div>
+            <Divider className='detallesDivider'/>
+            <div>
+              <Typography variant='h5'>Voluntaros inscritos:</Typography>
+              <Typography className='dato' variant='h5'>{Math.floor(Math.random()*10)}</Typography>
+            </div>
           </div>
       </Container>
           <div className='buttonModal'>

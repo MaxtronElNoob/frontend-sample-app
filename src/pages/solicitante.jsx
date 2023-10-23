@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Typography, Button, FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/material';
+import { Typography, Button, FormControl, InputLabel, Select, MenuItem, TextField, Container } from '@mui/material';
 import NavBar from '../components/nav_bar';
 
 export const Solicitante = () => {
@@ -43,6 +43,7 @@ export const Solicitante = () => {
   return (
     <div className='page'>
       <NavBar />
+      <Container>
       <Typography variant='h2' justifyContent='center'>Reportar Catastrofe</Typography>
       <form onSubmit={handleFormSubmit}>
         <FormControl required sx={{ m: 1 }} fullWidth>
@@ -91,6 +92,7 @@ export const Solicitante = () => {
           Publicar
         </Button>
       </form>
+      </Container>
     </div>
   );
 }

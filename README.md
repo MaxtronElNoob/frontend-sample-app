@@ -15,6 +15,7 @@ Install dependences
 npm install
 npm install react react-dom leaflet
 npm install react-leaflet
+npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 ```
 *En caso de error usar --force*
 
@@ -30,6 +31,7 @@ Now you can open http://localhost:5050
 - [Webpack](https://webpack.js.org/)
 - [React Router](https://reactrouter.com/en/main)
 - [Material UI](https://mui.com/material-ui/getting-started/usage/)
+- [react-leaflet](https://react-leaflet.js.org/)
 
 ### About stylesheets
 - Sample stylesheets were written using the [BEM](https://getbem.com/) structure
