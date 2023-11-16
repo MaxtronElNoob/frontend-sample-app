@@ -5,7 +5,7 @@
             "dia": "22/10/23",
             "lugar": "Malvilla",
             "n_vol": 0,
-            "volMax": 100,
+            "volMax": 85,
             "distance": 3.04,
             "Status":0,
             "tipo":"Derrumbe"
@@ -16,10 +16,10 @@
             "dia": "21/10/23",
             "lugar": "Cartagena",
             "n_vol": 10,
-            "volMax": 100,
+            "volMax": 200,
             "distance": 34.92,
             "Status":0,
-            "tipo":"Derrumbe"
+            "tipo":"Quimico"
         },
         {
             "id":3,
@@ -30,13 +30,35 @@
             "volMax": 100,
             "distance": 42.02,
             "Status":0,
-            "tipo":"Derrumbe"
+            "tipo":"Incendio"
+        },
+        {
+            "id":4,
+            "urgencia": "Urgencia",
+            "dia": "21/10/23",
+            "lugar": "Santiago",
+            "n_vol": 20,
+            "volMax": 65,
+            "distance": 100,
+            "Status":0,
+            "tipo":"Sequía"
+        },
+        {
+            "id":5,
+            "urgencia": "Urgencia",
+            "dia": "21/10/23",
+            "lugar": "La Reina",
+            "n_vol": 100,
+            "volMax": 1000,
+            "distance": 80,
+            "Status":0,
+            "tipo":"Inundacion"
         }
     ],
     "Solicitantes":[{
             "id":1,
             "ayudasActivas":1,
-            "historial":[2,3]
+            "historial":[4,5]
         }
     ],
     "Voluntarios":[{

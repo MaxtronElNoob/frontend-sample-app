@@ -18,20 +18,29 @@ export const HomePage = () => {
     setListaAyudasModalOpen(false);
     alert('Muchas gracias por inscribirte como voluntario');
   };
-  const markers = [
+  var markers = [
     {
       geocode: [-33.46, -70.67],
       popUp: "Tipo de Emergencia: " + data.ayudas[0].tipo
-    },
-    {
-      geocode: [-33.43, -70.64],
-      popUp: "Tipo de Emergencia: " + data.ayudas[0].tipo
-    },
-    {
-      geocode: [-33.45, -70.70],
-      popUp: "Tipo de Emergencia: " + data.ayudas[0].tipo
     }
+    // ,
+    // {
+    //   geocode: [-33.43, -70.64],
+    //   popUp: "Tipo de Emergencia: " + data.ayudas[1].tipo
+    // },
+    // {
+    //   geocode: [-33.45, -70.70],
+    //   popUp: "Tipo de Emergencia: " + data.ayudas[2].tipo
+    // }
   ];
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('x') === '1') { // '===' is for comparison, '=' is for assignment
+    markers.push({
+      geocode: [-33.43, -70.64],
+      popUp: "Tipo de Emergencia: " + data.ayudas[1].tipo
+    });
+  }
 
   const customIcon = new Icon({
     iconUrl: "https://cdn-icons-png.flaticon.com/128/684/684908.png",

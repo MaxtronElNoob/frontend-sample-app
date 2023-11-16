@@ -7,45 +7,32 @@ export const Solicitante = () => {
   const [catastrofe, setCatastrofe] = React.useState('');
   const [volMax, setVolMax] = React.useState(1); // Establece el valor inicial en 1
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
 
-    // Verifica que el número de voluntarios sea como mínimo 1
-    if (volMax < 1) {
-      alert('El número de voluntarios debe ser como mínimo 1.');
-      return;
-    }
+  //   // Verifica que el número de voluntarios sea como mínimo 1
+  //   if (volMax < 1) {
+  //     alert('El número de voluntarios debe ser como mínimo 1.');
+  //     return;
+  //   }
 
-    // Crear un objeto JSON con los datos del formulario
-    const formData = {
-      id: 3,
-      urgencia: 'Urgencia',
-      dia: '23/10/23',
-      lugar: 'Quillancitos', // Asegúrate de que este campo sea dinámico si es necesario
-      n_vol: 0,
-      volMax: volMax,
-      distance: 0,
-      Status: 0,
-      tipo: catastrofe,
-    };
+  //   // Guardar los datos en el almacenamiento local
+  //   localStorage.setItem('formData', JSON.stringify(formData));
 
-    // Guardar los datos en el almacenamiento local
-    localStorage.setItem('formData', JSON.stringify(formData));
+  //   alert('Se ha enviado su solicitud de ayuda.');
 
-    alert('Se ha enviado su solicitud de ayuda.');
-
-    // Restablecer el formulario si es necesario
-    setAfectados('');
-    setCatastrofe('');
-    setVolMax(1); // Restablece el valor a 1
-  };
+  //   // Restablecer el formulario si es necesario
+  //   setAfectados('');
+  //   setCatastrofe('');
+  //   setVolMax(1); // Restablece el valor a 1
+  // }
 
   return (
     <div className='page'>
       <NavBar />
       <Container>
       <Typography variant='h2' justifyContent='center'>Reportar Catastrofe</Typography>
-      <form onSubmit={handleFormSubmit}>
+      <form /*onSubmit={handleFormSubmit}*/>
         <FormControl required sx={{ m: 1 }} fullWidth>
           <InputLabel id="afectados-label">Personas Afectadas</InputLabel>
           <Select
@@ -88,7 +75,7 @@ export const Solicitante = () => {
             onChange={(e) => setVolMax(e.target.value)}
           />
         </FormControl>
-        <Button type="submit" variant="contained" color="primary" sx={{ m: 1 }}>
+        <Button type="submit" variant="contained" color="primary" sx={{ m: 1 }} href='/?x=1'>
           Publicar
         </Button>
       </form>

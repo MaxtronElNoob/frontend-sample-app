@@ -15,7 +15,6 @@ export const Search = (props) => {
                     <Typography component="div" variant="subtitle1" color="text.secondary" className='fecha'>{dia}</Typography>
                     <Typography className='Place' variant='h4'>{lugar}</Typography>
                     <Typography className='Num_voluntarios' variant='body'>Voluntarios: {n_vol}</Typography>
-                    {/* <Typography className='Num_voluntarios' variant='body'>Status: {n_vol}</Typography> */}
                 </CardContent>
                 <CardContent>
                     <Typography className='Distancia' variant='h3' component="div">{distance} km</Typography>
