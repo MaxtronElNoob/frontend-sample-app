@@ -35,7 +35,7 @@
         {
             "id":4,
             "urgencia": "Urgencia",
-            "dia": "21/10/23",
+            "dia": "20/10/23",
             "lugar": "Santiago",
             "n_vol": 20,
             "volMax": 65,
@@ -46,7 +46,7 @@
         {
             "id":5,
             "urgencia": "Urgencia",
-            "dia": "21/10/23",
+            "dia": "19/10/23",
             "lugar": "La Reina",
             "n_vol": 100,
             "volMax": 1000,
