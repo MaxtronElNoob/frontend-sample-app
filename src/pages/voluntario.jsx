@@ -58,7 +58,7 @@ export const Voluntario = () => {
             <Divider className='detallesDivider'/>
             <div>
               <Typography variant='h5'>Comuna:</Typography>
-              <Typography className='dato' variant='h5'>La Reina</Typography>
+              <Typography className='dato' variant='h5'>Recoleta</Typography>
             </div>
           </div>
         </Card>
@@ -86,6 +86,9 @@ export const Voluntario = () => {
             </Stack>
           </Stack>
         </Card>
+        </Container>
+        <Container className='voluntariadoActivo'>
+          <Typography variant='h4' gutterBottom>Voluntariado activo</Typography>
         {x && data.ayudas[x] &&  (
           <Card>
             <Stack direction="row" spacing={2} sx={{m: 1}}>
