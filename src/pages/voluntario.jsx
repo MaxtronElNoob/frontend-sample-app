@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Button, Container, Modal, Stack,Typography, Card,Divider } from '@mui/material';
 import { Search } from '../components/busqueda';
 import NavBar from '../components/nav_bar';
@@ -9,6 +9,16 @@ export const Voluntario = () => {
   const [listaAyudasModalOpen, setListaAyudasModalOpen] = useState(false);
   const [nVol, setNVol] = useState(4);
   const [nombres, setNombres] = useState(['Hernan', 'Juan', 'Maria', 'Pedro']);
+  const [x, setX] = useState(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('x')) {
+      const paramValue = params.get('x');
+      console.log('Parameter x value:', paramValue);
+      setX(paramValue);
+    }
+  }, [window.location.search]);
 
   const openModal = () => {
     setNVol(nVol + 1);
@@ -27,7 +37,8 @@ export const Voluntario = () => {
   const closeListaAyudasModal = () => {
     setListaAyudasModalOpen(false);
   };
-
+  console.log('Value of x:', x);
+  console.log('Does data[x] exist?', data[x]);
   return (
     <div className='page'>
       <NavBar />
@@ -75,6 +86,29 @@ export const Voluntario = () => {
             </Stack>
           </Stack>
         </Card>
+        {x && data.ayudas[x] &&  (
+          <Card>
+            <Stack direction="row" spacing={2} sx={{m: 1}}>
+              <Stack direction="column" spacing={2} >
+                <Typography variant="body1" align='center'>Fecha</Typography>
+                <Divider/>
+                <Typography variant="body1" align='center'>{data.ayudas[x].dia}</Typography>
+              </Stack>
+              <Divider orientation='vertical'/>
+              <Stack direction="column" spacing={2}>
+                <Typography variant="body1" align='center'>Avance</Typography>
+                <Divider/>
+                <Typography variant="body1" align='center'>{data.ayudas[x].n_vol} / {data.ayudas[x].volMax}</Typography>
+              </Stack>
+              <Divider orientation='vertical'/>
+              <Stack direction="column" spacing={2}>
+                <Typography variant="body1" align='center'>Catastrofe</Typography>
+                <Divider/>
+                <Typography variant="body1" align='center'>{data.ayudas[x].tipo}</Typography>
+              </Stack>
+            </Stack>
+          </Card>
+        )}
       </Container>
 
       <Modal open={modalOpen} onClose={closeModal}>

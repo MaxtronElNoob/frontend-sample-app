@@ -7,26 +7,6 @@ export const Solicitante = () => {
   const [catastrofe, setCatastrofe] = React.useState('');
   const [volMax, setVolMax] = React.useState(1); // Establece el valor inicial en 1
 
-  // const handleFormSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   // Verifica que el número de voluntarios sea como mínimo 1
-  //   if (volMax < 1) {
-  //     alert('El número de voluntarios debe ser como mínimo 1.');
-  //     return;
-  //   }
-
-  //   // Guardar los datos en el almacenamiento local
-  //   localStorage.setItem('formData', JSON.stringify(formData));
-
-  //   alert('Se ha enviado su solicitud de ayuda.');
-
-  //   // Restablecer el formulario si es necesario
-  //   setAfectados('');
-  //   setCatastrofe('');
-  //   setVolMax(1); // Restablece el valor a 1
-  // }
-
   return (
     <div className='page'>
       <NavBar />
