@@ -70,19 +70,19 @@ export const Voluntario = () => {
             <Stack direction="column" spacing={2} >
               <Typography variant="body1" align='center'>Fecha</Typography>
               <Divider/>
-              <Typography variant="body1" align='center'>{data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).dia}</Typography>
+              <Typography variant="body1" align='center'>{data.ayudas[2].dia}</Typography>
             </Stack>
             <Divider orientation='vertical'/>
             <Stack direction="column" spacing={2}>
               <Typography variant="body1" align='center'>Avance</Typography>
               <Divider/>
-              <Typography variant="body1" align='center'>{data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).n_vol} / {data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).volMax}</Typography>
+              <Typography variant="body1" align='center'>{data.ayudas[2].n_vol} / {data.ayudas[2].volMax}</Typography>
             </Stack>
             <Divider orientation='vertical'/>
             <Stack direction="column" spacing={2}>
               <Typography variant="body1" align='center'>Catastrofe</Typography>
               <Divider/>
-              <Typography variant="body1" align='center'>{data['ayudas'].find((entry) => entry['id'] === data.Solicitantes[0].ayudasActivas).tipo}</Typography>
+              <Typography variant="body1" align='center'>{data.ayudas[2].tipo}</Typography>
             </Stack>
           </Stack>
         </Card>
