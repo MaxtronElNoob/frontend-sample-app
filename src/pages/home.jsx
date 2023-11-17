@@ -31,9 +31,9 @@ export const HomePage = () => {
   var markers = [
     {
       geocode: [-33.46, -70.67],
-      tipo: data.ayudas[0].tipo,
-      urgencia: data.ayudas[0].urgencia,
-      distance: data.ayudas[0].distance
+      tipo: data.ayudas[2].tipo,
+      urgencia: data.ayudas[2].urgencia,
+      distance: data.ayudas[2].distance
     }
   ];
 
